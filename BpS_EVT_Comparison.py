@@ -8,7 +8,7 @@ from arcpy.sa import *
 arcpy.CheckOutExtension("spatial") # Check out any necessary licenses.
 arcpy.env.overwriteOutput = True
 
-
+# test comment
 
 
 def Model():  # Model
@@ -26,7 +26,7 @@ def Model():  # Model
     outEVT_ExtractByMask.save("clipEVT")
     print("clipping the BpS")
     outBpS_ExtractByMask = ExtractByMask(BpS, StudyArea)
-    outBpS_ExtractByMask.save("clipBpS")
+    outBpS_ExtractByMask.save("clipBpS1")
 
     print("buidling pyramids")
     arcpy.BatchBuildPyramids_management("clipEVT;clipBpS", "6", "SKIP_FIRST",
